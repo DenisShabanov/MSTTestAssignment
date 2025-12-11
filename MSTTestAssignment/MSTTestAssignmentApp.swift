@@ -11,7 +11,9 @@ import SwiftUI
 struct MSTTestAssignmentApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                ContentView()
+            }
         }
     }
 }
