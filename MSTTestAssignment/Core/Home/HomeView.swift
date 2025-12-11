@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    // MARK: - Body
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Контент страницы...")
+        }
+        .navigationTitle("Вы вошли в систему👋")
+        .foregroundStyle(Color.theme.accent)
     }
 }
 
+// MARK: - Preview
+
 #Preview {
-    HomeView()
+    NavigationStack {
+        HomeView()
+    }
 }
