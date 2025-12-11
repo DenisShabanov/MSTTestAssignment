@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct MSTTestAssignmentApp: App {
+    
     var body: some Scene {
         WindowGroup {
             NavigationStack {

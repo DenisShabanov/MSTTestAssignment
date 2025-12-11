@@ -12,6 +12,10 @@
 		14402AE02EEAEC5000920D81 /* MSTTestAssignmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14402ADC2EEAEC5000920D81 /* MSTTestAssignmentApp.swift */; };
 		14402AE52EEAEDB500920D81 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14402AE42EEAEDB500920D81 /* HomeView.swift */; };
 		14402AE82EEAEE6E00920D81 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14402AE72EEAEE6E00920D81 /* Color.swift */; };
+		14402AF32EEAFC2400920D81 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14402AF22EEAFC2400920D81 /* OnboardingView.swift */; };
+		14402AF62EEAFF2A00920D81 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14402AF52EEAFF2A00920D81 /* CustomButton.swift */; };
+		14402AF82EEB1A4C00920D81 /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14402AF72EEB1A4C00920D81 /* SubscriptionView.swift */; };
+		14402AFA2EEB1D5E00920D81 /* SubscriptionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14402AF92EEB1D5E00920D81 /* SubscriptionRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 		14402ADC2EEAEC5000920D81 /* MSTTestAssignmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSTTestAssignmentApp.swift; sourceTree = "<group>"; };
 		14402AE42EEAEDB500920D81 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		14402AE72EEAEE6E00920D81 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		14402AF22EEAFC2400920D81 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		14402AF52EEAFF2A00920D81 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		14402AF72EEB1A4C00920D81 /* SubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionView.swift; sourceTree = "<group>"; };
+		14402AF92EEB1D5E00920D81 /* SubscriptionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -115,9 +123,9 @@
 		14402AE12EEAED4200920D81 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				14402AF42EEAFF0E00920D81 /* Components */,
 				14402AEA2EEAEFFD00920D81 /* Onboarding */,
 				14402AE22EEAED7B00920D81 /* Home */,
-				14402AE32EEAED8A00920D81 /* PayWall */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -128,13 +136,6 @@
 				14402AE42EEAEDB500920D81 /* HomeView.swift */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		14402AE32EEAED8A00920D81 /* PayWall */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PayWall;
 			sourceTree = "<group>";
 		};
 		14402AE62EEAEE5500920D81 /* Extensions */ = {
@@ -148,8 +149,27 @@
 		14402AEA2EEAEFFD00920D81 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				14402AF12EEAFC0D00920D81 /* View */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		14402AF12EEAFC0D00920D81 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				14402AF22EEAFC2400920D81 /* OnboardingView.swift */,
+				14402AF72EEB1A4C00920D81 /* SubscriptionView.swift */,
+				14402AF92EEB1D5E00920D81 /* SubscriptionRowView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		14402AF42EEAFF0E00920D81 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				14402AF52EEAFF2A00920D81 /* CustomButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,7 +316,11 @@
 			files = (
 				14402AE52EEAEDB500920D81 /* HomeView.swift in Sources */,
 				14402AE82EEAEE6E00920D81 /* Color.swift in Sources */,
+				14402AF62EEAFF2A00920D81 /* CustomButton.swift in Sources */,
 				14402ADF2EEAEC5000920D81 /* ContentView.swift in Sources */,
+				14402AFA2EEB1D5E00920D81 /* SubscriptionRowView.swift in Sources */,
+				14402AF32EEAFC2400920D81 /* OnboardingView.swift in Sources */,
+				14402AF82EEB1A4C00920D81 /* SubscriptionView.swift in Sources */,
 				14402AE02EEAEC5000920D81 /* MSTTestAssignmentApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
