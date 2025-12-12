@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		14402ADE2EEAEC5000920D81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14402ADA2EEAEC5000920D81 /* Assets.xcassets */; };
-		14402ADF2EEAEC5000920D81 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14402ADB2EEAEC5000920D81 /* ContentView.swift */; };
 		14402AE02EEAEC5000920D81 /* MSTTestAssignmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14402ADC2EEAEC5000920D81 /* MSTTestAssignmentApp.swift */; };
 		14402AE52EEAEDB500920D81 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14402AE42EEAEDB500920D81 /* HomeView.swift */; };
 		14402AE82EEAEE6E00920D81 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14402AE72EEAEE6E00920D81 /* Color.swift */; };
@@ -16,6 +15,7 @@
 		14402AF62EEAFF2A00920D81 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14402AF52EEAFF2A00920D81 /* CustomButton.swift */; };
 		14402AF82EEB1A4C00920D81 /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14402AF72EEB1A4C00920D81 /* SubscriptionView.swift */; };
 		14402AFA2EEB1D5E00920D81 /* SubscriptionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14402AF92EEB1D5E00920D81 /* SubscriptionRowView.swift */; };
+		14402B092EEB447E00920D81 /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14402B082EEB447E00920D81 /* SubscriptionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +40,6 @@
 		14402ABD2EEAEC2300920D81 /* MSTTestAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSTTestAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14402AC72EEAEC2300920D81 /* MSTTestAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSTTestAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14402ADA2EEAEC5000920D81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		14402ADB2EEAEC5000920D81 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		14402ADC2EEAEC5000920D81 /* MSTTestAssignmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSTTestAssignmentApp.swift; sourceTree = "<group>"; };
 		14402AE42EEAEDB500920D81 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		14402AE72EEAEE6E00920D81 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -48,6 +47,7 @@
 		14402AF52EEAFF2A00920D81 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		14402AF72EEB1A4C00920D81 /* SubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionView.swift; sourceTree = "<group>"; };
 		14402AF92EEB1D5E00920D81 /* SubscriptionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionRowView.swift; sourceTree = "<group>"; };
+		14402B082EEB447E00920D81 /* SubscriptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -112,9 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				14402AE12EEAED4200920D81 /* Core */,
+				14402B072EEB43F800920D81 /* Utilies */,
 				14402AE62EEAEE5500920D81 /* Extensions */,
 				14402ADA2EEAEC5000920D81 /* Assets.xcassets */,
-				14402ADB2EEAEC5000920D81 /* ContentView.swift */,
 				14402ADC2EEAEC5000920D81 /* MSTTestAssignmentApp.swift */,
 			);
 			path = MSTTestAssignment;
@@ -170,6 +170,14 @@
 				14402AF52EEAFF2A00920D81 /* CustomButton.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		14402B072EEB43F800920D81 /* Utilies */ = {
+			isa = PBXGroup;
+			children = (
+				14402B082EEB447E00920D81 /* SubscriptionManager.swift */,
+			);
+			path = Utilies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,8 +325,8 @@
 				14402AE52EEAEDB500920D81 /* HomeView.swift in Sources */,
 				14402AE82EEAEE6E00920D81 /* Color.swift in Sources */,
 				14402AF62EEAFF2A00920D81 /* CustomButton.swift in Sources */,
-				14402ADF2EEAEC5000920D81 /* ContentView.swift in Sources */,
 				14402AFA2EEB1D5E00920D81 /* SubscriptionRowView.swift in Sources */,
+				14402B092EEB447E00920D81 /* SubscriptionManager.swift in Sources */,
 				14402AF32EEAFC2400920D81 /* OnboardingView.swift in Sources */,
 				14402AF82EEB1A4C00920D81 /* SubscriptionView.swift in Sources */,
 				14402AE02EEAEC5000920D81 /* MSTTestAssignmentApp.swift in Sources */,

@@ -19,7 +19,13 @@ struct SubscriptionView: View {
     // MARK: - State
     
     @State
-    private var selectedSubscription: SubscriptionType? = .yearly
+    private var selectedSubscription: SubscriptionType?
+    var onFinish: (() -> Void)?
+    
+    //MARK: - EnvironmentObject
+    
+    @EnvironmentObject
+    private var subscription: SubscriptionManager
     
     // MARK: - Body
     
@@ -28,15 +34,25 @@ struct SubscriptionView: View {
             subscriptionOffer
             subscriptionOptions
             
-            if (selectedSubscription != nil) {
-                CustomButton(title: "Оформить подписку")
-            } else {
-                CustomButton(title: "Продолжить без подписки")
+            CustomButton(
+                title: selectedSubscription != nil ?
+                "Оформить подписку" : "Продолжить без подписки"
+            )
+            .onTapGesture {
+                subscription.updateSubscription(
+                    subscribe: selectedSubscription == .monthly ?
+                        .month : selectedSubscription == .yearly ?
+                        .year : .free
+                )
+                onFinish?()
             }
         }
         .padding()
         .font(.title2)
         .multilineTextAlignment(.center)
+        .onAppear {
+            syncSelectedSubscription()
+        }
     }
     
 }
@@ -89,9 +105,26 @@ extension SubscriptionView {
     
 }
 
+// MARK: - Private Methods
+
+extension SubscriptionView {
+    
+    private func syncSelectedSubscription() {
+        switch subscription.selectedSubscription {
+        case .year:
+            selectedSubscription = .yearly
+        case .month:
+            selectedSubscription = .monthly
+        case .free:
+            selectedSubscription = nil
+        }
+    }
+}
+
 
 // MARK: - Preview
 
 #Preview {
     SubscriptionView()
+        .environmentObject(SubscriptionManager())
 }

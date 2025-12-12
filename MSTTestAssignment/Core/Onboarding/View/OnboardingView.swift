@@ -9,11 +9,33 @@ import SwiftUI
 
 struct OnboardingView: View {
     
+    // MARK: - Property
+    
+    var onFinish: (() -> Void)?
+    
     // MARK: - Body
     
     var body: some View {
         VStack(spacing: 20){
             Spacer()
+            text
+            Spacer()
+            CustomButton(title: "Продолжить")
+                .onTapGesture {
+                    onFinish?()
+                }
+
+        }
+        .padding()
+    }
+}
+
+// MARK: - Layout
+
+extension OnboardingView {
+    
+    private var text: some View {
+        Group {
             Text("Добро пожаловать!")
                 .foregroundStyle(Color.theme.card)
                 .font(.title)
@@ -22,22 +44,13 @@ struct OnboardingView: View {
                 .font(.headline)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 20)
-            Spacer()
-            NavigationLink {
-                SubscriptionView()
-            } label: {
-                CustomButton(title: "Продолжить")
-            }
-
         }
-        .padding()
     }
+    
 }
 
 // MARK: - Preview
 
 #Preview {
-    NavigationStack{
-        OnboardingView()
-    }
+    OnboardingView()
 }

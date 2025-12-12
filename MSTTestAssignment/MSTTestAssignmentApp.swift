@@ -10,10 +10,18 @@ import SwiftUI
 @main
 struct MSTTestAssignmentApp: App {
     
+    // MARK: - StateObj
+    
+    @StateObject
+    private var subscriptionManager = SubscriptionManager()
+    
+    // MARK: - Body
+    
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                ContentView()
+                HomeView()
+                    .environmentObject(subscriptionManager)
             }
         }
     }
